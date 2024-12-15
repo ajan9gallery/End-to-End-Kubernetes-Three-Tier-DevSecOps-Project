@@ -1,15 +1,10 @@
 data "aws_ami" "ami" {
   most_recent = true
 
-  owners = ["099720109477"]  # Canonical owner ID
-
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-24.04-amd64-server-*"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
   }
 
-  filter {
-    name   = "ami-id"
-    values = ["ami-0e2c8caa4b6378d8c"]  # Use the AMI ID you provided
-  }
+  owners = ["099720109477"]
 }
