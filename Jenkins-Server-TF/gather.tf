@@ -3,8 +3,8 @@ data "aws_ami" "ami" {
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
+    values = ["ubuntu-noble-24.04-amd64-server-20241109"]
   }
 
-  owners = ["099720109477"]
+  owners = ["099720109477"]  # Canonical owner ID
 }
